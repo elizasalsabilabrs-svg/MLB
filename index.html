@@ -1,153 +1,282 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eliza Library</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jihan Najla Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
-}
+  <style>
+    :root {
+      --primary: #6BBF9A;
+      --primary-dark: #55A885;
+      --secondary: #F0ECCE;
+      --text-dark: #2f5d4a;
+    }
 
-body{
-    background:linear-gradient(135deg,#6bbf9a,#8fd3b8);
-    color:white;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* NAVBAR */
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
-}
+    /* BACKGROUND GRADIENT HIJAU */
+    body {
+      background: linear-gradient(180deg, #4CAF84 0%, #A8E6CF 100%);
+      min-height: 100vh;
+    }
 
-nav h2{
-    font-weight:600;
-}
+    /* NAVBAR */
+    nav {
+      background: var(--primary-dark);
+      padding: 15px 0;
+    }
 
-nav a{
-    text-decoration:none;
-    color:white;
-    margin-left:25px;
-    font-weight:500;
-}
+    .menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+    }
 
-nav a:hover{
-    border-bottom:2px solid white;
-}
+    .menu li {
+      position: relative;
+    }
 
-/* HERO */
-.hero{
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 14px;
+      display: block;
+    }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
+    .login-menu {
+      margin-left: auto;
+    }
 
-.hero p{
-    font-size:18px;
-    margin-bottom:40px;
-}
+    /* DROPDOWN */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background: white;
+      border-radius: 12px;
+      min-width: 200px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+      overflow: hidden;
+      z-index: 999;
+    }
 
-.search-box{
-    background:#eaf7f1;
-    padding:40px;
-    border-radius:25px;
-    width:600px;
-    max-width:90%;
-    color:#2f5d4a;
-}
+    .dropdown-menu li a {
+      color: #333;
+      padding: 12px 20px;
+    }
 
-.search-box input{
-    width:70%;
-    padding:12px;
-    border-radius:20px;
-    border:1px solid #6bbf9a;
-    outline:none;
-}
+    .dropdown-menu li a:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
 
-.search-box button{
-    padding:12px 20px;
-    border:none;
-    background:#6bbf9a;
-    color:white;
-    border-radius:20px;
-    cursor:pointer;
-}
+    /* HERO GRADIENT HIJAU */
+    .hero {
+      background: linear-gradient(90deg, #4CAF84 0%, #A8E6CF 100%);
+      text-align: center;
+      color: white;
+      padding: 60px 20px;
+    }
+    
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+    }
 
-.search-box button:hover{
-    background:#55a885;
-}
+    .hero p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
 
-.menu-btn{
-    margin-top:25px;
-}
+    /* CARD */
+    .card {
+      background: rgba(240, 236, 206, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
 
-.menu-btn a{
-    display:inline-block;
-    margin:8px;
-    padding:10px 20px;
-    border:1px solid #6bbf9a;
-    border-radius:20px;
-    text-decoration:none;
-    color:#2f5d4a;
-}
+      width: 80%;
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
 
-.menu-btn a:hover{
-    background:#6bbf9a;
-    color:white;
-}
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.6);
 
-footer{
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-}
-</style>
+      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+
+      text-align: center;
+      color: var(--text-dark);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* SEARCH */
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .search-box input {
+      width: 70%;
+      padding: 15px;
+      border-radius: 30px;
+      border: 2px solid var(--primary);
+      outline: none;
+    }
+
+    .search-box button {
+      padding: 15px 25px;
+      margin-left: 10px;
+      border-radius: 30px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-box button:hover {
+      background: var(--primary-dark);
+    }
+
+    /* TAGS */
+    .tag {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background: white;
+      border-radius: 20px;
+      border: 1px solid var(--primary);
+      color: var(--text-dark);
+    }
+
+    /* JAM OPERASIONAL */
+    .jam-operasional {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    .jam-operasional p {
+      background: white;
+      padding: 18px 25px;
+      border-radius: 15px;
+      min-width: 180px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+      border-top: 5px solid var(--primary);
+    }
+
+    hr {
+      margin: 25px 0;
+      border: none;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .footer-text {
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #2f5d4a;
+    }
+
+    @media(max-width: 768px) {
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box input,
+      .search-box button {
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
-    <h2>Eliza Library</h2>
-    <div>
-        <a href="index.html">Beranda</a>
-        <a href="cv.html">CV</a>
-        <a href="media.html">Media</a>
-    </div>
+  <ul class="menu">
+    <li><a href="#">Beranda</a></li>
+    <li><a href="#">Layanan</a></li>
+
+    <li class="dropdown">
+      <a href="#">Tentang Saya ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="cv.html" target="_blank">Curriculum Vitae</a></li>
+        <li><a href="https://instagram.com/JIAANNFS" target="_blank">Media Sosial</a></li>
+        <li><a href="https://youtu.be/pfM6q0TLoUo?si=1NOcOe_cCuwA1Cjx" target="_blank">Audio dan Video</a></li>
+      </ul>
+    </li> 
+
+    <li class="login-menu">
+      <a href="login.html" target="_blank">Login</a>
+    </li>
+  </ul>
 </nav>
 
-<div class="hero">
-    <h1>Welcome to Eliza Library</h1>
-    <p>Ribuan Buku Siap untuk Kamu Baca!</p>
+<section class="hero">
+  <h1>Welcome to Jihan Najla Library</h1>
+  <p>Ribuan Buku Siap untuk Kamu Baca!</p>
+</section>
 
-    <div class="search-box">
-        <input type="text" placeholder="Masukkan kata kunci untuk mencari koleksi...">
-        <button>Cari</button>
+<div class="card">
 
-        <div class="menu-btn">
-            <a href="cv.html">Profil Saya</a>
-            <a href="media.html">Media Sosial</a>
-        </div>
-    </div>
+  <div class="search-box">
+    <input type="text" placeholder="Masukkan kata kunci untuk mencari koleksi...">
+    <button>Cari</button>
+  </div>
+
+  <div>
+    <span class="tag">Koleksi Digital</span>
+    <span class="tag">Inspirasi Akademik</span>
+    <span class="tag">Ruang Belajar</span>
+  </div>
+
+  <h3 style="margin:20px 0;">🕒 Jam Operasional</h3>
+
+  <div class="jam-operasional">
+    <p><strong>Senin – Kamis</strong><br>08.00 – 16.00 WIB</p>
+    <p><strong>Jumat</strong><br>08.30 – 16.30 WIB</p>
+  </div>
+
+  <hr>
+
+  <div class="footer-text">
+    <strong>Jihan Najla Fathinah</strong><br>
+    230709062<br>
+    Universitas Sumatera Utara
+  </div>
+
+  <div class="footer">
+    © 2026 Jihan Najla Library
+  </div>
+
 </div>
-
-<footer>
-    © 2026 Eliza Library | Universitas Sumatera Utara
-</footer>
 
 </body>
 </html>
