@@ -7,6 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+html{
+  scroll-behavior:smooth;
+}
+
 :root {
   --primary: #6BBF9A;
   --primary-dark: #4CAF84;
@@ -119,6 +123,48 @@ nav .logo {
   line-height:1.6;
 }
 
+/* BUTTON VIDEO */
+.video-link{
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 16px;
+  background:#4CAF84;
+  color:white;
+  text-decoration:none;
+  border-radius:20px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.video-link:hover{
+  background:#2f5d4a;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  width:85%;
+  max-width:1100px;
+  margin:60px auto;
+  text-align:center;
+}
+
+.video-section h2 {
+  color:white;
+  margin-bottom:30px;
+}
+
+.video-container {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.video-container iframe {
+  width:100%;
+  height:220px;
+  border-radius:15px;
+}
+
 /* FOOTER */
 footer {
   margin-top:auto;
@@ -164,14 +210,14 @@ footer {
   <div class="logo">🌿 MindBloom Library</div>
 
   <ul class="menu">
-    <li><a href="perpus.html" target="_blank">Beranda</a></li>
-    <li><a href="koleksi.html" target="_blank">Koleksi</a></li>
-    <li><a href="layanan.html" target="_blank">Layanan</a></li>
+    <li><a href="perpus.html">Beranda</a></li>
+    <li><a href="koleksi.html">Koleksi</a></li>
+    <li><a href="layanan.html">Layanan</a></li>
   </ul>
 
   <div class="right-menu">
-    <a href="login.html" target="_blank">Login</a>
-    <a href="signup.html" target="_blank">Sign In</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign In</a>
   </div>
 </nav>
 
@@ -184,41 +230,48 @@ footer {
 
   <div class="service-card">
     <h3>📚 Peminjaman Buku</h3>
-    <p>Menyediakan koleksi buku psikologi, self-healing, dan pengembangan diri yang dapat dipinjam secara langsung maupun online.</p>
+    <p>Menyediakan koleksi buku psikologi dan pengembangan diri.</p>
   </div>
 
   <div class="service-card">
     <h3>🧠 Ruang Self-Healing</h3>
-    <p>Area nyaman untuk membaca, refleksi diri, journaling, dan meditasi ringan dalam suasana yang tenang.</p>
+    <p>Area nyaman untuk membaca, refleksi diri, dan journaling.</p>
   </div>
 
   <div class="service-card">
     <h3>💬 Diskusi & Sharing Session</h3>
-    <p>Sesi diskusi rutin tentang kesehatan mental, mindfulness, dan pengembangan diri bersama komunitas.</p>
-  </div>
-
-  <div class="service-card">
-    <h3>📖 Konsultasi Literasi</h3>
-    <p>Bantuan pencarian referensi dan rekomendasi bacaan sesuai kebutuhan emosional dan akademik.</p>
-  </div>
-
-  <div class="service-card">
-    <h3>🌿 Workshop Mindfulness</h3>
-    <p>Kegiatan pelatihan seperti journaling therapy, breathing exercise, dan emotional awareness training.</p>
+    <p>Sesi diskusi rutin tentang kesehatan mental dan mindfulness.</p>
   </div>
 
   <div class="service-card">
     <h3>🖥️ Akses Digital Library</h3>
-    <p>Akses e-book dan jurnal psikologi secara digital untuk mendukung pembelajaran fleksibel.</p>
+    <p>Akses e-book dan jurnal psikologi secara digital.</p>
   </div>
 
 </div>
+
+<!-- KOLEKSI VIDEO -->
+<section class="video-section" id="koleksi-video">
+  <h2>🎥 Koleksi Video Edukasi & Motivasi</h2>
+
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/j9vqa4K4h90" 
+      allowfullscreen>
+    </iframe>
+
+    <iframe 
+      src="https://www.youtube.com/embed/yi6gVC61lv0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
 <footer>
   <div class="footer-container">
     <div class="footer-section">
       <h4>MindBloom Library</h4>
-      <p>Perpustakaan khusus kesehatan mental yang menyediakan koleksi buku dan ruang refleksi untuk mendukung kesejahteraan jiwa.</p>
+      <p>Perpustakaan khusus kesehatan mental yang mendukung kesejahteraan jiwa.</p>
     </div>
 
     <div class="footer-section">
