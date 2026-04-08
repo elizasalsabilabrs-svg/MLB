@@ -8,114 +8,306 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
+:root{
+  --primary:#6BBF9A;
+  --dark:#2f5d4a;
+}
+
+body{
   margin:0;
-  background: linear-gradient(180deg, #4CAF84 0%, #A8E6CF 100%);
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(120deg,#2f5d4a,#6BBF9A);
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:rgba(0,0,0,0.2);
+  color:white;
+}
+
+.logo{font-weight:700;}
+
+nav a{
+  text-decoration:none;
+  background:#fff;
   color:#2f5d4a;
+  padding:6px 14px;
+  border-radius:20px;
 }
 
 /* CONTAINER */
-.container {
-  max-width:900px;
+.container{
+  max-width:1000px;
   margin:40px auto;
   background:white;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* TITLE */
-h1 {
-  text-align:center;
-  margin-bottom:20px;
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
-/* SECTION */
-.section {
-  margin-bottom:30px;
+/* CARD */
+.card{
+  background:#f7f7f7;
+  padding:20px;
+  border-radius:10px;
+}
+
+.box{
+  background:#eaeaea;
+  padding:12px;
+  border-radius:8px;
+  margin-top:10px;
 }
 
 /* FORM */
-input, textarea {
+input, textarea, select{
   width:100%;
-  padding:12px;
+  padding:10px;
   margin-top:8px;
-  margin-bottom:15px;
-  border-radius:10px;
+  border-radius:8px;
   border:1px solid #ccc;
 }
 
-button {
-  background:#4CAF84;
-  color:white;
+button{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
   border:none;
-  padding:12px 20px;
   border-radius:20px;
+  background:#2f5d4a;
+  color:white;
   cursor:pointer;
 }
 
-button:hover {
-  background:#3e9e72;
+button:hover{
+  background:#244a3b;
+}
+
+/* CHAT */
+.chat-box{
+  margin-top:15px;
+  max-height:250px;
+  overflow-y:auto;
+}
+
+.chat{
+  background:#d4f5e6;
+  padding:12px;
+  border-radius:15px;
+  margin-top:10px;
+  position:relative;
+  animation:fadeIn 0.4s ease;
+}
+
+.chat small{
+  display:block;
+  margin-top:5px;
+  color:#555;
+}
+
+.delete-btn{
+  position:absolute;
+  top:8px;
+  right:10px;
+  background:red;
+  color:white;
+  border:none;
+  border-radius:50%;
+  width:22px;
+  height:22px;
+  cursor:pointer;
+}
+
+/* ANIMASI */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  background:#2f5d4a;
+  color:white;
+  padding:40px 20px;
+}
+
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-section h4{margin-bottom:10px;}
+
+.footer-section p{
+  font-size:14px;
+  color:#d6f5e8;
+  margin-bottom:6px;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:25px;
+  font-size:13px;
+  opacity:0.8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr;}
 }
 </style>
-
 </head>
+
 <body>
 
+<nav>
+  <div class="logo">🌿 MindBloom Library</div>
+  <a href="index.html">⬅ Kembali</a>
+</nav>
+
 <div class="container">
-  <h1>🌿 About MindBloom Library</h1>
+  <h2>About Us</h2>
 
-  <!-- DESKRIPSI -->
-  <div class="section">
-    <p>
-      MindBloom Library adalah perpustakaan berbasis digital yang berfokus pada kesehatan mental, 
-      self-healing, dan pengembangan diri. Kami hadir sebagai ruang aman bagi siapa saja yang ingin 
-      belajar, refleksi diri, dan menemukan ketenangan melalui literasi.
-    </p>
+  <div class="grid">
+
+    <!-- KIRI -->
+    <div class="card">
+      <h3>🌿 Tentang Kami</h3>
+      <p>Perpustakaan digital fokus kesehatan mental & self-healing.</p>
+
+      <div class="box">📚 Koleksi Lengkap</div>
+      <div class="box">🎓 Learning by Practice</div>
+      <div class="box">🚀 Siap Dunia Kerja</div>
+
+      <div class="box">📍 Medan</div>
+      <div class="box">📞 08123456789</div>
+      <div class="box">📧 email@email.com</div>
+    </div>
+
+    <!-- KANAN -->
+    <div class="card">
+      <h3>💬 Kritik & Saran</h3>
+
+      <form onsubmit="kirimPesan(event)">
+        <input type="text" id="nama" placeholder="Nama" required>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <select id="subjek">
+          <option>Kritik</option>
+          <option>Saran</option>
+        </select>
+
+        <textarea id="pesan" rows="4" placeholder="Tulis pesan..." required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+
+      <div class="chat-box" id="chatBox"></div>
+      <button onclick="hapusSemua()">🧹 Hapus Semua</button>
+
+    </div>
+
   </div>
-
-  <!-- ALAMAT -->
-  <div class="section">
-    <h3>📍 Alamat</h3>
-    <p>Jl. Pendidikan No. 10, Medan, Sumatera Utara, Indonesia</p>
-
-    <h3>📞 Kontak</h3>
-    <p>Email: info@mindbloomlibrary.com</p>
-    <p>Instagram: @mindbloomlibrary</p>
-  </div>
-
-  <!-- VISI MISI -->
-  <div class="section">
-    <h3>🎯 Visi</h3>
-    <p>Mewujudkan masyarakat yang sadar akan pentingnya kesehatan mental melalui literasi.</p>
-
-    <h3>🎯 Misi</h3>
-    <ul>
-      <li>Menyediakan koleksi buku kesehatan mental yang berkualitas</li>
-      <li>Membangun ruang refleksi dan diskusi</li>
-      <li>Mendukung self-healing melalui literasi</li>
-    </ul>
-  </div>
-
-  <!-- FEEDBACK -->
-  <div class="section">
-    <h3>💬 Kritik & Saran</h3>
-    <form>
-      <label>Nama</label>
-      <input type="text" placeholder="Masukkan nama kamu">
-
-      <label>Email</label>
-      <input type="email" placeholder="Masukkan email">
-
-      <label>Pesan (Kritik / Saran)</label>
-      <textarea rows="5" placeholder="Tulis kritik atau saran kamu..."></textarea>
-
-      <button type="submit">Kirim</button>
-    </form>
-  </div>
-
 </div>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>MindBloom Library</h4>
+      <p>Perpustakaan kesehatan mental untuk kesejahteraan jiwa.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Kontak</h4>
+      <p>Email: info@mindbloomlibrary.com</p>
+      <p>Instagram: @mindbloom.library</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>📍 Alamat</h4>
+      <p>Medan, Sumatera Utara</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 MindBloom Library 🌿
+  </div>
+</footer>
+
+<script>
+let chatData = JSON.parse(localStorage.getItem("chatData")) || [];
+
+function tampilkanChat(){
+  let chatBox = document.getElementById("chatBox");
+  chatBox.innerHTML = "";
+
+  chatData.forEach((item, index)=>{
+    let div = document.createElement("div");
+    div.className = "chat";
+
+    div.innerHTML = `
+      <button class="delete-btn" onclick="hapusChat(${index})">×</button>
+      <b>${item.nama}</b> (${item.email}) - ${item.subjek}
+      <br>${item.pesan}
+      <small>${item.waktu}</small>
+    `;
+
+    chatBox.appendChild(div);
+  });
+
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function kirimPesan(e){
+  e.preventDefault();
+
+  let data = {
+    nama: document.getElementById("nama").value,
+    email: document.getElementById("email").value,
+    subjek: document.getElementById("subjek").value,
+    pesan: document.getElementById("pesan").value,
+    waktu: new Date().toLocaleTimeString()
+  };
+
+  chatData.push(data);
+  localStorage.setItem("chatData", JSON.stringify(chatData));
+
+  tampilkanChat();
+  document.querySelector("form").reset();
+}
+
+function hapusChat(index){
+  chatData.splice(index,1);
+  localStorage.setItem("chatData", JSON.stringify(chatData));
+  tampilkanChat();
+}
+
+function hapusSemua(){
+  chatData = [];
+  localStorage.removeItem("chatData");
+  tampilkanChat();
+}
+
+tampilkanChat();
+</script>
 
 </body>
 </html>
