@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | MindBloom Library</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary:#6BBF9A;
+  --primary-dark:#4CAF84;
+  --text-dark:#2f5d4a;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #4CAF84 0%, #A8E6CF 100%);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* NAVBAR */
+nav {
+  background: var(--primary-dark);
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+}
+
+.logo {
+  color:white;
+  font-weight:700;
+  font-size:18px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  margin-left:auto;
+  background:white;
+  color:var(--primary-dark);
+  padding:6px 14px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  color:white;
+  padding:60px 20px;
+}
+
+.hero h1 {
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.hero p {
+  font-size:16px;
+  opacity:0.9;
+}
+
+/* CONTAINER */
+.container {
+  width:90%;
+  max-width:1100px;
+  margin:40px auto;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card {
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 25px 45px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin:15px 0 10px;
+  color:var(--text-dark);
+}
+
+.card p {
+  font-size:14px;
+  color:#666;
+}
+
+/* ICON */
+.icon {
+  font-size:40px;
+}
+
+/* BUTTON */
+.card a {
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  border-radius:20px;
+  background:var(--primary);
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* FOOTER */
+footer {
+  margin-top:auto;
+  background:#2f5d4a;
+  color:white;
+  padding:40px 20px;
+}
+
+.footer-container {
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-section h4 {
+  margin-bottom:10px;
+}
+
+.footer-section p {
+  font-size:14px;
+  color:#d6f5e8;
+  margin-bottom:6px;
+}
+
+.footer-bottom {
+  text-align:center;
+  margin-top:25px;
+  font-size:13px;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">🌿 MindBloom Library</div>
+  <a href="perpus.html" class="back-btn">⬅ Beranda</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Admin Dashboard</h1>
+  <p>Kelola informasi dan profil MindBloom Library 🌿</p>
+</section>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🌿</div>
+      <h3>Founder</h3>
+      <p>Kenali pendiri MindBloom Library dan visinya.</p>
+      <a href="founder.html">Lihat</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">📄</div>
+      <h3>Curriculum Vitae</h3>
+      <p>Lihat profil lengkap dan pengalaman.</p>
+      <a href="cv.html">Lihat</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Instagram</h3>
+      <p>Ikuti update dan konten terbaru kami.</p>
+      <a href="https://instagram.com/mindbloom.library" target="_blank">Kunjungi</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>MindBloom Library</h4>
+      <p>Perpustakaan khusus kesehatan mental yang menyediakan ruang refleksi dan pembelajaran.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Kontak</h4>
+      <p>Email: info@mindbloomlibrary.com</p>
+      <p>Instagram: @mindbloomlibrary</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>📍 Alamat</h4>
+      <p>Medan, Sumatera Utara</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>🕒 Jam</h4>
+      <p>08.00 - 20.00</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 MindBloom Library — Growing Minds, Healing Hearts 🌿
+  </div>
+</footer>
+
+</body>
+</html>
