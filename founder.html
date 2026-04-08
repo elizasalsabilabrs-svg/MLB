@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Founder | MindBloom Library</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -31,12 +32,25 @@ body {
 nav {
   background: var(--primary-dark);
   padding:15px 40px;
+  display:flex;
+  align-items:center;
 }
 
 nav .logo {
   color:white;
   font-weight:700;
   font-size:18px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  margin-left:auto;
+  background:white;
+  color:var(--primary-dark);
+  padding:6px 14px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
 }
 
 /* CONTENT */
@@ -62,7 +76,7 @@ h1 {
   font-weight:300;
 }
 
-/* PROFILE SECTION */
+/* PROFILE */
 .profile {
   display:flex;
   gap:40px;
@@ -110,17 +124,43 @@ footer {
   margin-top:auto;
   background:#2f5d4a;
   color:white;
-  padding:30px;
-  text-align:center;
+  padding:40px 20px;
+}
+
+.footer-container {
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-section h4 {
+  margin-bottom:10px;
+}
+
+.footer-section p {
   font-size:14px;
+  color:#d6f5e8;
+  margin-bottom:6px;
+}
+
+.footer-bottom {
+  text-align:center;
+  margin-top:25px;
+  font-size:13px;
+  opacity:0.8;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <div class="logo">🌿 MindBloom Library</div>
+  <a href="index.html" class="back-btn">⬅ Beranda</a>
 </nav>
 
 <div class="container">
@@ -129,7 +169,6 @@ footer {
   <p class="subtitle">Growing Minds, Healing Hearts 🌿</p>
 
   <div class="profile">
-    <!-- GANTI NAMA FILE FOTO SESUAI FILE KAMU -->
     <img src="photo-cv.jpeg" alt="Foto Eliza" class="photo-img">
 
     <div>
@@ -138,50 +177,71 @@ footer {
         Saya adalah mahasiswa yang memiliki ketertarikan pada bidang literasi, 
         kesehatan mental, dan pengembangan sistem informasi perpustakaan. 
         MindBloom Library lahir dari keinginan saya untuk menciptakan ruang 
-        digital yang aman, nyaman, dan menenangkan bagi siapa saja yang ingin 
-        belajar sekaligus merawat kesehatan mentalnya.
+        digital yang aman, nyaman, dan menenangkan bagi siapa saja.
       </p>
     </div>
   </div>
 
   <div class="section">
-    <h2>🌿 Tujuan Mendirikan MindBloom Library</h2>
+    <h2>🌿 Tujuan</h2>
     <p>
-      MindBloom Library dibuat sebagai ruang literasi yang berfokus pada 
-      psikologi, self development, mindfulness, dan self-healing. 
-      Saya ingin menghadirkan perpustakaan yang bukan hanya tempat mencari buku, 
-      tetapi juga tempat refleksi dan tempat bertumbuh secara emosional maupun intelektual.
+      MindBloom Library dibuat sebagai ruang literasi berbasis kesehatan mental 
+      yang mendukung refleksi dan pengembangan diri.
     </p>
   </div>
 
   <div class="section vision-box">
     <h2>🧠 Visi</h2>
-    <p>
-      Menjadi perpustakaan digital berbasis kesehatan mental yang 
-      mendukung pertumbuhan pribadi dan kesejahteraan emosional generasi muda.
-    </p>
+    <p>Menjadi perpustakaan digital yang mendukung kesejahteraan emosional.</p>
 
     <h2 style="margin-top:20px;">💚 Misi</h2>
     <ul>
-      <li>Menyediakan koleksi literasi psikologi dan self-healing.</li>
-      <li>Membangun ruang refleksi dan diskusi yang positif.</li>
-      <li>Mendorong kesadaran pentingnya kesehatan mental.</li>
-      <li>Mengintegrasikan teknologi dengan layanan perpustakaan modern.</li>
+      <li>Menyediakan koleksi psikologi & self-healing</li>
+      <li>Membangun ruang diskusi positif</li>
+      <li>Meningkatkan kesadaran mental health</li>
+      <li>Mengintegrasikan teknologi</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>✨ Harapan ke Depan</h2>
+    <h2>✨ Harapan</h2>
     <p>
-      Saya berharap MindBloom Library dapat berkembang menjadi platform literasi digital 
-      yang lebih interaktif dan suportif bagi generasi muda.
+      Semoga MindBloom menjadi platform literasi digital yang interaktif dan suportif.
     </p>
   </div>
 
 </div>
 
+<!-- FOOTER LENGKAP -->
 <footer>
-  © 2026 MindBloom Library — Created with care by Eliza Salsabila 🌿
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>MindBloom Library</h4>
+      <p>Perpustakaan khusus kesehatan mental yang menyediakan ruang refleksi dan pembelajaran.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Kontak</h4>
+      <p>Email: info@mindbloomlibrary.com</p>
+      <p>Instagram: @mindbloom.library</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>📍 Alamat</h4>
+      <p>Medan, Sumatera Utara</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>🕒 Jam</h4>
+      <p>08.00 - 20.00</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 MindBloom Library — Growing Minds, Healing Hearts 🌿
+  </div>
 </footer>
 
 </body>
