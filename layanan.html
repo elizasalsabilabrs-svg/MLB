@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Layanan - MindBloom Library</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -45,36 +46,19 @@ nav .logo {
   font-size:18px;
 }
 
-.menu {
-  list-style:none;
-  display:flex;
-  align-items:center;
-  margin-left:40px;
-}
-
-.menu li {
-  margin-right:20px;
-}
-
-.menu a {
-  color:white;
-  text-decoration:none;
-  font-weight:500;
-}
-
-.right-menu {
-  margin-left:auto;
-  display:flex;
-  gap:15px;
-}
-
-.right-menu a {
+/* BACK BUTTON (SAMA KAYAK KOLEKSI) */
+.back-btn {
   background:white;
   color:var(--primary-dark);
   padding:6px 14px;
   border-radius:20px;
-  font-size:14px;
   text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.back-btn:hover {
+  background:#eaf7f1;
 }
 
 /* HERO */
@@ -123,48 +107,6 @@ nav .logo {
   line-height:1.6;
 }
 
-/* BUTTON VIDEO */
-.video-link{
-  display:inline-block;
-  margin-top:15px;
-  padding:8px 16px;
-  background:#4CAF84;
-  color:white;
-  text-decoration:none;
-  border-radius:20px;
-  font-size:14px;
-  transition:0.3s;
-}
-
-.video-link:hover{
-  background:#2f5d4a;
-}
-
-/* VIDEO SECTION */
-.video-section {
-  width:85%;
-  max-width:1100px;
-  margin:60px auto;
-  text-align:center;
-}
-
-.video-section h2 {
-  color:white;
-  margin-bottom:30px;
-}
-
-.video-container {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-}
-
-.video-container iframe {
-  width:100%;
-  height:220px;
-  border-radius:15px;
-}
-
 /* FOOTER */
 footer {
   margin-top:auto;
@@ -186,12 +128,9 @@ footer {
   margin-bottom:10px;
 }
 
-.footer-section p,
-.footer-section a {
+.footer-section p {
   font-size:14px;
   color:#d6f5e8;
-  text-decoration:none;
-  display:block;
   margin-bottom:6px;
 }
 
@@ -206,26 +145,22 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <div class="logo">🌿 MindBloom Library</div>
 
-  <ul class="menu">
-    <li><a href="perpus.html">Beranda</a></li>
-    <li><a href="koleksi.html">Koleksi</a></li>
-    <li><a href="layanan.html">Layanan</a></li>
-  </ul>
-
-  <div class="right-menu">
-    <a href="login.html">Login</a>
-    <a href="signup.html">Sign In</a>
+  <div style="margin-left:auto;">
+    <a href="index.html" class="back-btn">⬅ Beranda</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <h1>Layanan Kami</h1>
   <p>Mendukung Kesehatan Mental & Pertumbuhan Diri 🌿</p>
 </section>
 
+<!-- LAYANAN -->
 <div class="container">
 
   <div class="service-card">
@@ -250,35 +185,35 @@ footer {
 
 </div>
 
-<!-- KOLEKSI VIDEO -->
-<section class="video-section" id="koleksi-video">
-  <h2>🎥 Koleksi Video Edukasi & Motivasi</h2>
-
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/j9vqa4K4h90" 
-      allowfullscreen>
-    </iframe>
-
-    <iframe 
-      src="https://www.youtube.com/embed/yi6gVC61lv0" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
   <div class="footer-container">
+
     <div class="footer-section">
       <h4>MindBloom Library</h4>
-      <p>Perpustakaan khusus kesehatan mental yang mendukung kesejahteraan jiwa.</p>
+      <p>Perpustakaan khusus kesehatan mental yang menyediakan koleksi buku dan ruang refleksi untuk mendukung kesejahteraan jiwa.</p>
     </div>
 
     <div class="footer-section">
       <h4>Kontak</h4>
       <p>Email: info@mindbloomlibrary.com</p>
-      <p>Instagram: @mindbloomlibrary</p>
+      <p>Instagram: @mindbloom.library</p>
     </div>
+
+    <div class="footer-section">
+      <h4>📍 Alamat</h4>
+      <p>Jl. Pendidikan No. 10</p>
+      <p>Medan, Sumatera Utara</p>
+      <p>Indonesia</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>🕒 Jam Operasional</h4>
+      <p>Senin - Jumat : 08.00 - 20.00</p>
+      <p>Sabtu : 09.00 - 18.00</p>
+      <p>Minggu : Tutup</p>
+    </div>
+
   </div>
 
   <div class="footer-bottom">
