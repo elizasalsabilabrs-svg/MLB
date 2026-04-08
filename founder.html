@@ -42,15 +42,36 @@ nav .logo {
   font-size:18px;
 }
 
-/* BACK BUTTON */
-.back-btn {
+/* NAV BUTTONS */
+.nav-right{
   margin-left:auto;
+  display:flex;
+  gap:10px;
+}
+
+.nav-btn{
   background:white;
   color:var(--primary-dark);
   padding:6px 14px;
   border-radius:20px;
   text-decoration:none;
   font-size:14px;
+  transition:0.3s;
+}
+
+.nav-btn:hover{
+  background:var(--primary-dark);
+  color:white;
+}
+
+/* ADMIN BUTTON */
+.nav-btn.admin{
+  background:#2f5d4a;
+  color:white;
+}
+
+.nav-btn.admin:hover{
+  background:#1e3f34;
 }
 
 /* CONTENT */
@@ -160,7 +181,10 @@ footer {
 <!-- NAVBAR -->
 <nav>
   <div class="logo">🌿 MindBloom Library</div>
-  <a href="index.html" class="back-btn">⬅ Beranda</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-btn">⬅ Beranda</a>
+    <a href="admin.html" class="nav-btn admin">⚙ Admin</a>
+  </div>
 </nav>
 
 <div class="container">
@@ -174,10 +198,9 @@ footer {
     <div>
       <h2>Eliza Salsabila</h2>
       <p>
-        Saya adalah mahasiswa yang memiliki ketertarikan pada bidang literasi, 
-        kesehatan mental, dan pengembangan sistem informasi perpustakaan. 
-        MindBloom Library lahir dari keinginan saya untuk menciptakan ruang 
-        digital yang aman, nyaman, dan menenangkan bagi siapa saja.
+        Saya memiliki ketertarikan pada bidang literasi, kesehatan mental, dan pengelolaan perpustakaan. 
+        MindBloom Library hadir sebagai ruang literasi hybrid yang dapat diakses secara langsung maupun digital, 
+        dengan suasana yang nyaman, tenang, dan mendukung proses membaca serta refleksi diri bagi setiap pengunjung.
       </p>
     </div>
   </div>
@@ -185,40 +208,47 @@ footer {
   <div class="section">
     <h2>🌿 Tujuan</h2>
     <p>
-      MindBloom Library dibuat sebagai ruang literasi berbasis kesehatan mental 
-      yang mendukung refleksi dan pengembangan diri.
+      MindBloom Library dibuat sebagai ruang literasi berbasis kesehatan mental yang menggabungkan layanan 
+      perpustakaan fisik dan digital, guna mendukung aktivitas membaca, refleksi, serta pengembangan diri 
+      dalam suasana yang aman dan nyaman.
     </p>
   </div>
 
   <div class="section vision-box">
     <h2>🧠 Visi</h2>
-    <p>Menjadi perpustakaan digital yang mendukung kesejahteraan emosional.</p>
+    <p>
+      Menjadi perpustakaan hybrid yang mendukung kesejahteraan emosional melalui layanan literasi 
+      yang mudah diakses, baik secara langsung maupun digital.
+    </p>
 
     <h2 style="margin-top:20px;">💚 Misi</h2>
     <ul>
-      <li>Menyediakan koleksi psikologi & self-healing</li>
-      <li>Membangun ruang diskusi positif</li>
-      <li>Meningkatkan kesadaran mental health</li>
-      <li>Mengintegrasikan teknologi</li>
+      <li>Menyediakan koleksi buku psikologi & self-healing (fisik dan digital)</li>
+      <li>Menciptakan ruang baca yang nyaman dan menenangkan</li>
+      <li>Menghadirkan akses digital yang mudah bagi pengguna</li>
+      <li>Membangun lingkungan yang mendukung diskusi positif</li>
+      <li>Meningkatkan kesadaran akan pentingnya kesehatan mental</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>✨ Harapan</h2>
     <p>
-      Semoga MindBloom menjadi platform literasi digital yang interaktif dan suportif.
+      Semoga MindBloom Library menjadi ruang literasi yang tidak hanya menyediakan informasi, 
+      tetapi juga menjadi tempat yang aman, fleksibel, dan suportif untuk belajar, beristirahat, 
+      serta menenangkan pikiran, baik secara langsung maupun online.
     </p>
   </div>
 
 </div>
 
-<!-- FOOTER LENGKAP -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-container">
 
     <div class="footer-section">
       <h4>MindBloom Library</h4>
-      <p>Perpustakaan khusus kesehatan mental yang menyediakan ruang refleksi dan pembelajaran.</p>
+      <p>Perpustakaan hybrid berbasis kesehatan mental yang menyediakan ruang refleksi dan pembelajaran.</p>
     </div>
 
     <div class="footer-section">
@@ -233,7 +263,7 @@ footer {
     </div>
 
     <div class="footer-section">
-      <h4>🕒 Jam</h4>
+      <h4>🕒 Jam Operasional</h4>
       <p>08.00 - 20.00</p>
     </div>
 
